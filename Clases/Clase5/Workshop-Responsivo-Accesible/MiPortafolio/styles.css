@@ -143,8 +143,12 @@ footer {
     }
 
     .perfil img {
-        width: 180px;
-    }
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6b1fa2;
+}
 
     .grid-proyectos {
         grid-template-columns: 1fr;

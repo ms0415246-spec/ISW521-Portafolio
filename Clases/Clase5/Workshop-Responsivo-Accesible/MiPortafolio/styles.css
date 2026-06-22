@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f3ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #1a103d;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: #d36bff;
+    outline: 2px solid #d36bff;
+    padding: 4px;
+}
+
+.perfil {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.perfil img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.perfil-info h2,
+.proyectos h2,
+.contacto h2 {
+    color: #6b1fa2;
+    margin-bottom: 1rem;
+}
+
+.proyectos {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #1a103d;
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #6b1fa2;
+    font-weight: bold;
+}
+
+.card a:focus {
+    outline: 2px solid #6b1fa2;
+    padding: 4px;
+}
+
+.contacto {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #1a103d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Pantallas medianas: 2 columnas */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .grid-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Pantallas pequeñas: menú vertical y proyectos apilados */
+@media (max-width: 599px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem auto;
+        gap: 1rem;
+    }
+
+    .perfil img {
+        width: 180px;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+}
